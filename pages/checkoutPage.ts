@@ -25,7 +25,7 @@ export class CheckoutPage {
   }
 
   async clickOnCartCheckoutButton(): Promise<void> {
-    await this.cartCheckoutButton.click()
+    await this.cartCheckoutButton.click({timeout: 10000})
   }
 
   async clickOnAddressCheckoutButton(): Promise<void> {

@@ -19,7 +19,6 @@ test.describe('User checkout on AutomationPractice', () => {
     page,
   }) => {
     checkoutPage.checkout.addSingleProductToCart(page)
-
     await checkoutPage.clickOnCartCheckoutButton();
     await checkoutPage.clickOnAddressCheckoutButton();
     await checkoutPage.checkTermsOfService();
