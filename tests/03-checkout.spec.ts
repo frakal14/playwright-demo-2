@@ -35,7 +35,6 @@ test.describe('User checkout on AutomationPractice', () => {
     await checkoutPage.clickOnAddressCheckoutButton();
     await checkoutPage.clickOnShippingCheckoutButton();
 
-   // await expect(page.locator('.fancybox-error')).toBeVisible()
     await expect(checkoutPage.termsOfServiceAlert)
     .toHaveText(checkoutPage.termsOfServiceAlertText)
 
