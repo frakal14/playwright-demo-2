@@ -36,7 +36,7 @@ test.describe('User checkout on AutomationPractice', () => {
     await checkoutPage.clickOnShippingCheckoutButton();
 
     await expect(checkoutPage.termsOfServiceAlert)
-    .toHaveText(checkoutPage.termsOfServiceAlertText)
+    .toHaveText(checkoutPage.termsOfServiceAlertText);
 
   })
 });
