@@ -28,4 +28,16 @@ test.describe('User checkout on AutomationPractice', () => {
 
     await expect(checkoutPage.orderConfirmAlert).toBeVisible();
   });
+
+  test('unsuccessful while terms of service is unchecked', async ({page})=> {
+    checkoutPage.checkout.addSingleProductToCart(page)
+    await checkoutPage.clickOnCartCheckoutButton();
+    await checkoutPage.clickOnAddressCheckoutButton();
+    await checkoutPage.clickOnShippingCheckoutButton();
+
+   // await expect(page.locator('.fancybox-error')).toBeVisible()
+    await expect(checkoutPage.termsOfServiceAlert)
+    .toHaveText(checkoutPage.termsOfServiceAlertText)
+
+  })
 });

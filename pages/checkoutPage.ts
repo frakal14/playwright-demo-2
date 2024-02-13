@@ -12,6 +12,8 @@ export class CheckoutPage {
   cartCheckoutButton = this.page.locator('[title="Proceed to checkout"]')
 
   termsOfServiceCheckBox = this.page.locator('[for="cgv"]');
+  termsOfServiceAlert = this.page.locator('.fancybox-error');
+  termsOfServiceAlertText = 'You must agree to the terms of service before continuing.'
 
   payByCheck = this.page.getByRole('link', { name: 'Pay by check (order' });
   confirmOrderButton = this.page.getByRole('button', {
